@@ -1,14 +1,15 @@
 //current position
 var pos = 0;
 //number of slides
-var totalSlides = $('#slider-wrap ul li').length;
+var totalSlides = 0;
 //get the slide width
-var sliderWidth = $('#slider-wrap').width();
+var sliderWidth = 0;
 
 
 $(document).ready(function(){
-
-
+	totalSlides = $('#slider-wrap ul li').length;
+	sliderWidth = $('#slider-wrap').width();
+	
 	/*****************
 	 BUILD THE SLIDER
 	*****************/
@@ -104,5 +105,3 @@ function pagination(){
 	$('#pagination-wrap ul li').removeClass('active');
 	$('#pagination-wrap ul li:eq('+pos+')').addClass('active');
 }
-
-	
